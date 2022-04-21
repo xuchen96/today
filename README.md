@@ -13,7 +13,7 @@
 
 ### 2.1 商品列表与搜索
 
-![commodity_list](https://github.com/2horse9sun/images/raw/master/University-O2O-img/commodity_list.png)
+![Screenshot_2022-04-21-22-13-42-040_com tencent mm](https://user-images.githubusercontent.com/57609580/164477426-c2a3e21b-afa1-4241-84e6-934eb8ad8a95.jpg)
 
 首页为商品列表展示界面。
 
@@ -27,7 +27,7 @@
 
 ### 2.2 商品详情页与商品问答
 
-![commodity_detail](https://github.com/2horse9sun/images/raw/master/University-O2O-img/commodity_detail.png)
+![Screenshot_2022-04-21-22-15-25-788_com tencent mm](https://user-images.githubusercontent.com/57609580/164477745-2bed5690-1e85-4d75-a888-165c399e22a5.jpg)
 
 点击商品卡片后，进入商品详情界面。
 
@@ -51,7 +51,7 @@
 
 ### 2.4 发起交易与交易操作
 
-![transaction_detail](https://github.com/2horse9sun/images/raw/master/University-O2O-img/transaction_detail.png)
+![Screenshot_2022-04-21-22-16-31-336_com tencent mm](https://user-images.githubusercontent.com/57609580/164477961-84af93e8-60a4-4c51-8577-7b49cc691113.jpg)
 
 点击商品详情界面的发起交易后，若商品能够被购买，则进入确认交易界面。用户可以选择商品数量（不超过库存），查看总价格，最后点击确认交易。
 
@@ -61,7 +61,8 @@
 
 ### 2.5 用户信息管理
 
-![user_info](https://github.com/2horse9sun/images/raw/master/University-O2O-img/user_info.png)
+
+![Screenshot_2022-04-21-22-17-05-770_com tencent mm](https://user-images.githubusercontent.com/57609580/164478137-e766e537-2ce3-4b85-9b7a-9a9d4bf783b2.jpg)
 
 点击底部Tab Bar我的，可以进入管理界面。
 
@@ -69,13 +70,13 @@
 
 ### 2.6 交易与商品管理
 
-![transactionAndCommodityManage](https://github.com/2horse9sun/images/raw/master/University-O2O-img/transactionAndCommodityManage.png)
+![Screenshot_2022-04-21-22-18-13-160_com tencent mm](https://user-images.githubusercontent.com/57609580/164478251-1d61d9cd-ef7f-4750-9a73-9c2e780565fd.jpg)
 
 在“我的交易”与“我发布的商品”中，可以查看交易详情，进行交易操作，或者查看发布的商品，选择删除商品。加载方式均为分页加载。
 
 ### 2.7 新交易推送
 
-![subscribeMsg](https://github.com/2horse9sun/images/raw/master/University-O2O-img/subscribeMsg.png)
+
 
 为了提醒卖家有人购买其发布的商品，小程序加入消息推送功能。在发布商品时，会让用户选择允许接受新交易通知。点击允许后，若有人对卖家发布的商品成功发起交易，卖家便会收到消息推送，点击推送内容可直接查看交易详情，进行交易操作。
 
@@ -91,7 +92,7 @@
 
 ### 3.1 总体架构
 
-![overall-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/overall-design.png)
+
 
 本项目以云开发为核心，主要包括：云函数，云数据库，云存储，云调用和HTTP API（暂未完成）五个部分。除了云开发外，还有小程序端，后台管理系统（CMS），第三方服务器等部分。
 
@@ -135,17 +136,16 @@ HTTP API（暂未完成）：
 
 ### 3.2 云数据库表结构
 
-![ER-modeling](https://github.com/2horse9sun/images/raw/master/University-O2O-img/ER-modeling.png)
+
 
 由于项目较大，涉及到的实体较多，故先画出该项目的ER Model（为了便于展示，略去了attribute）。实体共有8个：用户，大学，商品，商品分类，商品问题，问题回复，交易，轮播图（暂未完成）。上述实体的关系如图片所示。
 
 根据模型图，可以在云数据库中建立8张数据表，对于特定的键建立索引。本项目，除了图片以外，删除方式都是软删除，故添加`is_deleted`字段。
 
-![cloudDB-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/cloudDB-design.png)
+
 
 ### 3.3 小程序端架构
 
-![miniprogram-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/miniprogram-design.png)
 
 小程序端共分为以下几个部分：用户模块、商品模块、交易模块、工具类、学生验证（暂未完成）、云函数统一接口、缓存管理、组件库和CSS库。
 
@@ -169,7 +169,7 @@ CSS库：为了小程序的样式更加美观，本项目使用[Color-UI库](htt
 
 ### 3.4 云函数结构
 
-![cloudFunc-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/cloudFunc-design.png)
+![cloudFunc-design]
 
 本项目一共创建了10个云函数，大多与云数据库中的数据表一一对应。由于业务功能较多，所以使用`tcb-router`进行路由转发，增加服务的数量。每个云函数中的方法不再赘述，见其名就可知其意，都是基本的CURD操作。
 
@@ -182,13 +182,13 @@ CSS库：为了小程序的样式更加美观，本项目使用[Color-UI库](htt
 
 ### 3.5 云存储结构
 
-![cloudStorage-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/cloudStorage-design.png)
+![cloudStorage-design]
 
 云存储中主要存放商品的缩略图和详情图的`fileIDs`、小程序背景图片及轮播图（暂未完成）。
 
 ### 3.6 云调用
 
-![cloudCall-design](https://github.com/2horse9sun/images/raw/master/University-O2O-img/cloudCall-design.png)
+![cloudCall-design]
 
 本项目的云调用主要是实现消息推送的功能，先在小程序端获取卖家的授权，然后由买家触发推送消息的云函数。
 
@@ -302,3 +302,6 @@ page{
 
 GPL许可证
 
+## 7.copy原开元项目
+
+作者https://gitee.com/zxz911/campus-flea-system-github?_from=gitee_search
