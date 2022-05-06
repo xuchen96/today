@@ -224,7 +224,7 @@ git clone https://github.com/2horse9sun/University_O2O.git
 
 ```javascript
 cloud.init({
-  env: "dreamland2-a708ef" // !!!!!!替换成自己的云环境ID !!!!!  是ID，不是云环境名称
+  env: "xc-z2821" // !!!!!!替换成自己的云环境ID !!!!!  是ID，不是云环境名称
 })
 ```
 
